@@ -1,0 +1,28 @@
+.views-field-field-icon div img{
+  position: relative;
+  float: right;
+  top: -393px;
+  left: -26px;
+}
+
+.views-field-field-content-image div a img,
+.views-field-field-external-image div a img,
+.views-field-field-youtube-video div div img{
+  border: 2px solid #000000;
+}
+
+div.views-field-field-youtube-video div.field-content div:after{
+    height: 72px;
+    width: 72px;
+    background-image: url(http://localhost/drupal882/modules/custom/tiles_grid/images/video-button.png);
+    background-repeat: no-repeat;;
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background-size: cover;
+    text-indent: -9999px;
+    display: block;
+    font-size: 0;
+    margin-top: -98px;
+    margin-left: 20px;
+}

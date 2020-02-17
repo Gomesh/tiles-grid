@@ -1,0 +1,5 @@
+<?php
+
+function tiles_grid_page_attachments(array &$attachments) {
+  $attachments['#attached']['library'][] = 'tiles_grid/tiles_grid';
+}

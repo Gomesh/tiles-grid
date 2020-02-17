@@ -1,0 +1,10 @@
+name: 'Tiles Grid'
+description: 'Create tiles grid on home page.'
+package: 'Tiles Grid'
+type: module
+core: 8.x
+version: 8.x-2.0
+project: tiles_grid
+datestamp: 1572370993
+dependencies:
+  - menu_ui

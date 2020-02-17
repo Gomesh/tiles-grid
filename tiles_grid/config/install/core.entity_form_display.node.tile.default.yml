@@ -1,0 +1,232 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tile.body
+    - field.field.node.tile.field_content
+    - field.field.node.tile.field_content_image
+    - field.field.node.tile.field_external_image
+    - field.field.node.tile.field_external_image_link
+    - field.field.node.tile.field_image_tags
+    - field.field.node.tile.field_what_created_new
+    - field.field.node.tile.field_youtube_video
+    - image.style.large
+    - node.type.tile
+  module:
+    - conditional_fields
+    - image
+    - link
+    - path
+    - text
+    - video_embed_field
+id: node.tile.default
+targetEntityType: node
+bundle: tile
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 7
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_content:
+    weight: 13
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_content_image:
+    weight: 9
+    settings:
+      preview_image_style: large
+      progress_indicator: throbber
+    third_party_settings:
+      conditional_fields:
+        e1966d28-b6de-4354-ba04-0775c16652d2:
+          dependee: field_what_created_new
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: 'Content Image'
+            effect: slide
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
+            selector: ''
+          entity_type: node
+          bundle: tile
+    type: image_image
+    region: content
+  field_external_image:
+    weight: 11
+    settings:
+      preview_image_style: large
+      progress_indicator: throbber
+    third_party_settings:
+      conditional_fields:
+        16b4d01f-4dab-445a-9cdd-a4fa4073c60b:
+          dependee: field_what_created_new
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: 'External Image'
+            effect: slide
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
+            selector: ''
+          entity_type: node
+          bundle: tile
+    type: image_image
+    region: content
+  field_external_image_link:
+    weight: 12
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings:
+      conditional_fields:
+        dc2d8e2d-da3e-4633-9861-a26c65221b40:
+          dependee: field_what_created_new
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: 'External Image'
+            effect: slide
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
+            selector: ''
+          entity_type: node
+          bundle: tile
+    type: link_default
+    region: content
+  field_image_tags:
+    weight: 14
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_what_created_new:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_youtube_video:
+    weight: 10
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        087ba3b6-8300-44b2-9884-f529365db5c6:
+          dependee: field_what_created_new
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                value: 'Youtube Link'
+            effect: slide
+            effect_options:
+              fade:
+                speed: '400'
+              slide:
+                speed: '400'
+            selector: ''
+          entity_type: node
+          bundle: tile
+    type: video_embed_field_textfield
+    region: content
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

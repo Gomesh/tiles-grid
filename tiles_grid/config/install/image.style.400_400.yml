@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: '400_400'
+label: '400 * 400'
+effects:
+  066c4292-ce8f-438d-9e78-89913ac8e6fd:
+    uuid: 066c4292-ce8f-438d-9e78-89913ac8e6fd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 400
+      anchor: center-center

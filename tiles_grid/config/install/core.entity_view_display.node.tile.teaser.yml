@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tile.body
+    - field.field.node.tile.field_content
+    - field.field.node.tile.field_content_image
+    - field.field.node.tile.field_external_image
+    - field.field.node.tile.field_external_image_link
+    - field.field.node.tile.field_image_tags
+    - field.field.node.tile.field_what_created_new
+    - field.field.node.tile.field_youtube_video
+    - node.type.tile
+  module:
+    - text
+    - user
+id: node.tile.teaser
+targetEntityType: node
+bundle: tile
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_content: true
+  field_content_image: true
+  field_external_image: true
+  field_external_image_link: true
+  field_image_tags: true
+  field_what_created_new: true
+  field_youtube_video: true

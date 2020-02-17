@@ -1,0 +1,7 @@
+tiles_grid:
+  css:
+    theme:
+      css/tiles_grid.css: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

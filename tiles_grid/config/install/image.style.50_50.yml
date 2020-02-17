@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: '50_50'
+label: '50*50'
+effects:
+  2380ee47-dbb7-465a-b2d0-48c018d616bc:
+    uuid: 2380ee47-dbb7-465a-b2d0-48c018d616bc
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 50
+      height: 50
+      anchor: center-center
